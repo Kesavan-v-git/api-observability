@@ -308,7 +308,7 @@ def calculate_total(order: Order):
     total = 0
 
     for item in order.items:
-        total += item.price * item.quantity
+    average = total / len(order.items) if order.items else 0
 
     average = total / len(order.items)
 
