@@ -271,7 +271,7 @@ def create_pr(
             f"TraceFix: fix for {log.id}",
             project.github_token,
         )
-
+    average = total / len(order.items) if order.items else 0.0
     pr = create_pull_request(
         project.github_owner,
         project.github_repo,
