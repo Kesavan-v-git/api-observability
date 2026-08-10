@@ -2,7 +2,7 @@ import httpx
 import base64
 
 def fetch_file_from_github(owner: str, repo: str, file_path: str, token: str) -> str:
-    url = f"https://api.github.com/repos/{owner}/{repo}/contents/{file_path}"
+    url = f"https://api.github.com/repos/{owner}/{repo}/contents/{file_path.lstrip('/')}"
     
     headers = {
         "Authorization": f"Bearer {token}",
